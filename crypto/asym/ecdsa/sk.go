@@ -97,7 +97,7 @@ func (sk *PrivateKey) SignWithOpts(msg []byte, opts *crypto.SignOpts) ([]byte, e
 	if opts == nil {
 		return sk.Sign(msg)
 	}
-	if opts.Hash == crypto.HASH_TYPE_SM3 && sk.Type() == crypto.SM2 {
+	if opts.Hash == crypto.HASH_TYPE_SM3 && sk.Type() == crypto.CLKEY {
 		skSM2, ok := sk.K.(*sm2.PrivateKey)
 		if !ok {
 			return nil, fmt.Errorf("SM2 private key does not match the type it claims")

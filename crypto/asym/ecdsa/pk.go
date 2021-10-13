@@ -80,7 +80,7 @@ func (pk *PublicKey) VerifyWithOpts(msg []byte, sig []byte, opts *crypto.SignOpt
 	if opts == nil {
 		return pk.Verify(msg, sig)
 	}
-	if opts.Hash == crypto.HASH_TYPE_SM3 && pk.Type() == crypto.SM2 {
+	if opts.Hash == crypto.HASH_TYPE_SM3 && pk.Type() == crypto.CLKEY {
 		pkSM2, ok := pk.K.(*sm2.PublicKey)
 		if !ok {
 			return false, fmt.Errorf("SM2 public key does not match the type it claims")
@@ -127,7 +127,7 @@ func (pk *PublicKey) Type() crypto.KeyType {
 		case *sm2.PublicKey:
 			switch key.Curve {
 			case sm2.P256Sm2():
-				return crypto.SM2
+				return crypto.CLKEY
 			}
 		}
 	}

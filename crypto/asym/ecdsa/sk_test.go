@@ -55,7 +55,7 @@ func TestSM2(t *testing.T) {
 
 func TestCLkey(t *testing.T) {
 	h := sha256.Sum256([]byte(msg))
-	priv, err := New(crypto.CLkey, []byte("myda2wn"))
+	priv, err := New(crypto.CLKEY, []byte("myda2wn"))
 	require.Nil(t, err)
 
 	privDER, err := priv.Bytes()
