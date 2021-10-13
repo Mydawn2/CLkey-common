@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c066268-5643-4eba-b302-91bfd0b7f238" name="Default Changelist" comment="add genaratepair-case CLkey">
-      <change beforePath="$PROJECT_DIR$/crypto/asym/asym_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/asym/asym_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crypto/crypto.go" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/crypto.go" afterDir="false" />
+    <list default="true" id="5c066268-5643-4eba-b302-91bfd0b7f238" name="Default Changelist" comment="add generateKeypair test">
+      <change beforePath="$PROJECT_DIR$/crypto/asym/ecdsa/sk.go" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/asym/ecdsa/sk.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +91,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="add genaratepair-case CLkey" />
-    <option name="LAST_COMMIT_MESSAGE" value="add genaratepair-case CLkey" />
+    <MESSAGE value="Upper crypto keyType" />
+    <MESSAGE value="add generateKeypair test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add generateKeypair test" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

@@ -113,7 +113,7 @@ func (sk *PrivateKey) SignWithOpts(msg []byte, opts *crypto.SignOpts) ([]byte, e
 		}
 
 		return asn1.Marshal(Sig{R: r, S: s})
-	} else if sk.Type() == crypto.CLkey {
+	} else if sk.Type() == crypto.CLKEY {
 		skSM2, ok := sk.K.(*sm2.PrivateKey)
 		if !ok {
 			return nil, fmt.Errorf("SM2 private key does not match the type it claims")
@@ -212,7 +212,7 @@ func New(keyType crypto.KeyType, uid []byte) (crypto.PrivateKey, error) {
 		}
 
 		return &PrivateKey{K: pri}, nil
-	case crypto.CLkey:
+	case crypto.CLKEY:
 		s, p_kgc, _, err := CLKeygen.Setup()
 		if err != nil {
 			return nil, err
