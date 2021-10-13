@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c066268-5643-4eba-b302-91bfd0b7f238" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/crypto/asym/asym.go" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/asym/asym.go" afterDir="false" />
+    <list default="true" id="5c066268-5643-4eba-b302-91bfd0b7f238" name="Default Changelist" comment="add genaratepair-case CLkey">
       <change beforePath="$PROJECT_DIR$/crypto/asym/asym_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/asym/asym_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crypto/crypto.go" beforeDir="false" afterPath="$PROJECT_DIR$/crypto/crypto.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,18 @@
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Go Test.TestSignAndVerifyPass in github.com/Mydawn2/CLkey-common/crypto/asym">
+  <component name="RunManager" selected="Go Test.TestGenerateKeyPair in github.com/Mydawn2/CLkey-common/crypto/asym">
+    <configuration name="TestGenerateKeyPair in github.com/Mydawn2/CLkey-common/crypto/asym" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="clcmn" />
+      <working_directory value="$PROJECT_DIR$/crypto/asym" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/Mydawn2/CLkey-common/crypto/asym" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestGenerateKeyPair\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestGenerateKeyPairPEM in github.com/Mydawn2/CLkey-common/crypto/asym" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="clcmn" />
       <working_directory value="$PROJECT_DIR$/crypto/asym" />
@@ -57,6 +68,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestGenerateKeyPair in github.com/Mydawn2/CLkey-common/crypto/asym" />
         <item itemvalue="Go Test.TestSignAndVerifyPass in github.com/Mydawn2/CLkey-common/crypto/asym" />
         <item itemvalue="Go Test.TestGenerateKeyPairPEM in github.com/Mydawn2/CLkey-common/crypto/asym" />
       </list>
@@ -79,7 +91,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="add genaratepair-case CLkey" />
+    <option name="LAST_COMMIT_MESSAGE" value="add genaratepair-case CLkey" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
