@@ -16,8 +16,14 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestGenerateKeyPair(t *testing.T) {
+	priv, err := GenerateKeyPair(crypto.CLKEY, []byte(crypto.CRYPTO_DEFAULT_UID))
+	require.Nil(t, err)
+	fmt.Println("sk: ", priv)
+}
+
 func TestGenerateKeyPairPEM(t *testing.T) {
-	sk, pk, err := GenerateKeyPairPEM(crypto.CLkey, []byte("mydawn"))
+	sk, pk, err := GenerateKeyPairPEM(crypto.CLKEY, []byte("mydawn"))
 	require.Nil(t, err)
 	fmt.Println("sk: ", sk)
 	fmt.Println("pk: ", pk)
@@ -33,7 +39,7 @@ func TestSignAndVerifyPass(t *testing.T) {
 	testSignAndVerify(t, crypto.ECC_NISTP384)
 	testSignAndVerify(t, crypto.ECC_NISTP521)
 	testSignAndVerify(t, crypto.SM2)
-	testSignAndVerify(t, crypto.CLkey)
+	testSignAndVerify(t, crypto.CLKEY)
 	testSignAndVerify(t, crypto.RSA2048)
 	testSignAndVerify(t, crypto.RSA1024)
 	testSignAndVerify(t, crypto.RSA512)
