@@ -17,7 +17,7 @@ import (
 )
 
 func TestGenerateKeyPairPEM(t *testing.T) {
-	sk, pk, err := GenerateKeyPairPEM(crypto.SM2, []byte("mydawn"))
+	sk, pk, err := GenerateKeyPairPEM(crypto.CLkey, []byte("mydawn"))
 	require.Nil(t, err)
 	fmt.Println("sk: ", sk)
 	fmt.Println("pk: ", pk)
@@ -33,6 +33,7 @@ func TestSignAndVerifyPass(t *testing.T) {
 	testSignAndVerify(t, crypto.ECC_NISTP384)
 	testSignAndVerify(t, crypto.ECC_NISTP521)
 	testSignAndVerify(t, crypto.SM2)
+	testSignAndVerify(t, crypto.CLkey)
 	testSignAndVerify(t, crypto.RSA2048)
 	testSignAndVerify(t, crypto.RSA1024)
 	testSignAndVerify(t, crypto.RSA512)

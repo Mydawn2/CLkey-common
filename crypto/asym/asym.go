@@ -38,7 +38,7 @@ const pemBegin = "-----BEGIN"
 // 生成签名公私钥对
 func GenerateKeyPair(keyType crypto.KeyType, uid []byte) (crypto.PrivateKey, error) {
 	switch keyType {
-	case crypto.SM2, crypto.ECC_NISTP256, crypto.ECC_NISTP384, crypto.ECC_NISTP521, crypto.ECC_Secp256k1:
+	case crypto.SM2, crypto.CLkey, crypto.ECC_NISTP256, crypto.ECC_NISTP384, crypto.ECC_NISTP521, crypto.ECC_Secp256k1:
 		return ecdsa.New(keyType, uid)
 	case crypto.RSA512, crypto.RSA1024, crypto.RSA2048, crypto.RSA3072:
 		return rsa.New(keyType)
@@ -89,6 +89,12 @@ func GenerateKeyPairPEM(keyType crypto.KeyType, uid []byte) (sk string, pk strin
 func GenerateEncKeyPair(keyType crypto.KeyType, uid []byte) (crypto.DecryptKey, error) {
 	switch keyType {
 	case crypto.SM2:
+		key, err := ecdsa.New(keyType, uid)
+		if err != nil {
+			return nil, err
+		}
+		return key.(crypto.DecryptKey), nil
+	case crypto.CLkey:
 		key, err := ecdsa.New(keyType, uid)
 		if err != nil {
 			return nil, err
